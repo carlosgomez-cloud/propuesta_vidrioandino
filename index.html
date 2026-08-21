@@ -295,23 +295,12 @@
         </div>
       </div>
 
-      <div class="roe-grid">
-        <div class="roe-card">
-          <div class="tag">🏆 ROE · Primer Año</div>
-          <div class="num" id="roeAno1">—</div>
-        </div>
-        <div class="roe-card">
-          <div class="tag">🏆 ROE · A partir del segundo año</div>
-          <div class="num" id="roeAno2">—</div>
-        </div>
-      </div>
-
       <div class="assumptions">
         Supuestos ajustables: recargas procesadas al mes, salario mensual operativo y horas trabajadas al mes son estimaciones
         de referencia — deben confirmarse con Vidrio Andino para afinar el cálculo. El cashback aplica únicamente durante los
-        primeros 6 meses del contrato. El ROE refleja exclusivamente los ahorros cuantificables dentro de esta calculadora;
-        no incluye el valor estratégico de evitar cargas prestacionales y parafiscales al entregar el beneficio en especie
-        en lugar de vía nómina, ni la reducción de riesgo operativo por manejo de efectivo.
+        primeros 6 meses del contrato. Los ahorros mostrados reflejan exclusivamente lo cuantificable dentro de esta
+        calculadora; no incluyen el valor estratégico de evitar cargas prestacionales y parafiscales al entregar el
+        beneficio en especie en lugar de vía nómina, ni la reducción de riesgo operativo por manejo de efectivo.
       </div>
     </div>
   </section>
@@ -431,9 +420,6 @@ function calcular(){
   const netoAno1 = totalAno1 - costoAnualPlataforma;
   const netoAno2 = totalAno2 - costoAnualPlataforma;
 
-  const roeAno1 = costoAnualPlataforma !== 0 ? (netoAno1 / costoAnualPlataforma) * 100 : 0;
-  const roeAno2 = costoAnualPlataforma !== 0 ? (netoAno2 / costoAnualPlataforma) * 100 : 0;
-
   document.getElementById('valorPlanCOP').value = fmtCOP(costoAnualPlataforma);
   document.getElementById('cashbackPreview').value = fmtCOP(ahorroCashback) + ' (año 1)';
 
@@ -448,9 +434,6 @@ function calcular(){
 
   document.getElementById('netoAno1').textContent = fmtCOP(netoAno1);
   document.getElementById('netoAno2').textContent = fmtCOP(netoAno2);
-
-  document.getElementById('roeAno1').textContent = fmtPct(roeAno1);
-  document.getElementById('roeAno2').textContent = fmtPct(roeAno2);
 
   document.getElementById('automatizacionBreakdown').textContent =
     automatizacionOn
