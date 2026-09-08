@@ -8,442 +8,486 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0B0B0E;
-    --card:#141418;
-    --card2:#17171C;
-    --green:#00D68F;
-    --gold:#C9A84C;
-    --text:#F5F5F7;
-    --muted:#9C9CA6;
-    --border:#26262E;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter',sans-serif;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{font-family:'Inter Tight',sans-serif;margin:0;}
-  a{color:inherit;}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+:root{
+--bg:#0B0B0E;
+--card:#141418;
+--card2:#17171C;
+--green:#00D68F;
+--gold:#C9A84C;
+--text:#F5F5F7;
+--muted:#9C9CA6;
+--border:#26262E;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+background:var(--bg);
+color:var(--text);
+font-family:'Inter',sans-serif;
+-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Inter Tight',sans-serif;margin:0;}
+a{color:inherit;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
 
-  /* ===== HERO ===== */
-  .hero{padding:36px 0 44px;border-bottom:1px solid var(--border);}
-  .hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px;flex-wrap:wrap;gap:16px;}
-  .jeeves-wordmark img{height:26px;display:block;}
-  .client-badge{background:#fff;border-radius:12px;padding:8px 16px;display:flex;align-items:center;}
-  .client-badge img{height:26px;display:block;}
-  .addressed{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--card2);border:1px solid var(--border);
-    border-radius:999px;padding:7px 16px;font-size:13px;color:var(--muted);
-    margin-bottom:22px;
-  }
-  .addressed b{color:var(--text);font-weight:600;}
-  h1.hero-title{
-    font-size:40px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;
-    max-width:780px;margin-bottom:16px;
-  }
-  h1.hero-title em{color:var(--green);font-style:normal;}
-  .hero-lead{font-size:16px;line-height:1.6;color:var(--muted);max-width:640px;margin-bottom:30px;}
-  .hero-photos{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;}
-  .cc-photo{
-    background:#000;border-radius:16px;overflow:hidden;border:1px solid var(--border);
-    flex-shrink:0;
-  }
-  .cc-photo img{width:100%;height:100%;object-fit:cover;display:block;}
-  .cc-world-elite{width:150px;height:194px;}
-  .cc-corporate{width:220px;height:132px;}
-  .cc-virtual{width:220px;height:132px;}
-  .cc-caption{font-size:11px;color:var(--muted);margin-top:8px;text-align:center;}
+/* ===== HERO ===== */
+.hero{padding:36px 0 44px;border-bottom:1px solid var(--border);}
+.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px;flex-wrap:wrap;gap:16px;}
+.jeeves-wordmark img{height:26px;display:block;}
+.client-badge{background:#fff;border-radius:12px;padding:8px 16px;display:flex;align-items:center;}
+.client-badge img{height:26px;display:block;}
+.addressed{
+display:inline-flex;align-items:center;gap:8px;
+background:var(--card2);border:1px solid var(--border);
+border-radius:999px;padding:7px 16px;font-size:13px;color:var(--muted);
+margin-bottom:22px;
+}
+.addressed b{color:var(--text);font-weight:600;}
+h1.hero-title{
+font-size:40px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;
+max-width:780px;margin-bottom:16px;
+}
+h1.hero-title em{color:var(--green);font-style:normal;}
+.hero-lead{font-size:16px;line-height:1.6;color:var(--muted);max-width:640px;margin-bottom:30px;}
+.hero-photos{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;}
+.cc-photo{
+background:#000;border-radius:16px;overflow:hidden;border:1px solid var(--border);
+flex-shrink:0;
+}
+.cc-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.cc-world-elite{width:150px;height:194px;}
+.cc-corporate{width:220px;height:132px;}
+.cc-virtual{width:220px;height:132px;}
+.cc-caption{font-size:11px;color:var(--muted);margin-top:8px;text-align:center;}
 
-  /* ===== SECTION HEADERS ===== */
-  .section{padding:52px 0;}
-  .section-tag{
-    font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);
-    font-weight:600;margin-bottom:10px;
-  }
-  .section-title{font-size:26px;font-weight:700;margin-bottom:8px;}
-  .section-sub{font-size:14px;color:var(--muted);max-width:640px;margin-bottom:28px;}
+/* ===== SECTION HEADERS ===== */
+.section{padding:52px 0;}
+.section-tag{
+font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);
+font-weight:600;margin-bottom:10px;
+}
+.section-title{font-size:26px;font-weight:700;margin-bottom:8px;}
+.section-sub{font-size:14px;color:var(--muted);max-width:640px;margin-bottom:28px;}
 
-  /* ===== CALCULATOR ===== */
-  .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  @media (max-width:760px){.calc-grid{grid-template-columns:1fr;}}
-  .calc-card{
-    background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;
-  }
-  .calc-card h3{font-size:15px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-  .field{margin-bottom:14px;}
-  .field label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:6px;}
-  .field .hint{display:block;font-size:11px;color:#6d6d78;margin-top:4px;}
-  .field input, .field .fixed{
-    width:100%;background:#0E0E12;border:1px solid var(--border);border-radius:10px;
-    padding:10px 12px;color:var(--text);font-size:14.5px;font-family:'Inter',sans-serif;
-  }
-  .field input:focus{outline:none;border-color:var(--green);}
-  .field .fixed{color:var(--gold);font-weight:600;background:#1b1710;border-color:#3a2f16;}
-  .field input[disabled]{color:var(--muted);background:#111114;}
-  .toggle-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
-  .switch{position:relative;width:42px;height:24px;flex-shrink:0;}
-  .switch input{opacity:0;width:0;height:0;}
-  .slider{position:absolute;inset:0;background:#2b2b33;border-radius:999px;transition:.2s;cursor:pointer;}
-  .slider:before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s;}
-  input:checked + .slider{background:var(--green);}
-  input:checked + .slider:before{transform:translateX(18px);}
+/* ===== CALCULATOR ===== */
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+@media (max-width:760px){.calc-grid{grid-template-columns:1fr;}}
+.calc-card{
+background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;
+}
+.calc-card h3{font-size:15px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.field{margin-bottom:14px;}
+.field label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:6px;}
+.field .hint{display:block;font-size:11px;color:#6d6d78;margin-top:4px;}
+.field input, .field .fixed{
+width:100%;background:#0E0E12;border:1px solid var(--border);border-radius:10px;
+padding:10px 12px;color:var(--text);font-size:14.5px;font-family:'Inter',sans-serif;
+}
+.field input:focus{outline:none;border-color:var(--green);}
+.field .fixed{color:var(--gold);font-weight:600;background:#1b1710;border-color:#3a2f16;}
+.field input[disabled]{color:var(--muted);background:#111114;}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.switch{position:relative;width:42px;height:24px;flex-shrink:0;}
+.switch input{opacity:0;width:0;height:0;}
+.slider{position:absolute;inset:0;background:#2b2b33;border-radius:999px;transition:.2s;cursor:pointer;}
+.slider:before{content:"";position:absolute;width:18px;height:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s;}
+input:checked + .slider{background:var(--green);}
+input:checked + .slider:before{transform:translateX(18px);}
 
-  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  @media (max-width:480px){.two-col{grid-template-columns:1fr;}}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media (max-width:480px){.two-col{grid-template-columns:1fr;}}
 
-  /* results */
-  .results{margin-top:32px;}
-  .results h3{font-size:15px;font-weight:600;margin-bottom:14px;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;font-size:12px;}
-  .rubro-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px;}
-  @media (max-width:520px){.rubro-grid{grid-template-columns:1fr;}}
-  .rubro-card{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:16px 18px;}
-  .rubro-card .lbl{font-size:12.5px;color:var(--muted);margin-bottom:6px;}
-  .rubro-card .val{font-size:20px;font-weight:700;color:var(--green);}
+/* results */
+.results{margin-top:32px;}
+.results h3{font-size:15px;font-weight:600;margin-bottom:14px;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;font-size:12px;}
+.rubro-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px;}
+@media (max-width:520px){.rubro-grid{grid-template-columns:1fr;}}
+.rubro-card{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:16px 18px;}
+.rubro-card .lbl{font-size:12.5px;color:var(--muted);margin-bottom:6px;}
+.rubro-card .val{font-size:20px;font-weight:700;color:var(--green);}
 
-  .totales-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;}
-  @media (max-width:640px){.totales-grid{grid-template-columns:1fr;}}
-  .total-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;}
-  .total-card .lbl{font-size:13px;color:var(--muted);margin-bottom:10px;}
-  .total-card .val{font-size:28px;font-weight:800;color:var(--text);margin-bottom:10px;}
-  .total-card .neto{font-size:13px;color:var(--muted);border-top:1px solid var(--border);padding-top:10px;}
-  .total-card .neto b{color:var(--text);}
+.totales-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;}
+@media (max-width:640px){.totales-grid{grid-template-columns:1fr;}}
+.total-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;}
+.total-card .lbl{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.total-card .val{font-size:28px;font-weight:800;color:var(--text);margin-bottom:10px;}
+.total-card .neto{font-size:13px;color:var(--muted);border-top:1px solid var(--border);padding-top:10px;}
+.total-card .neto b{color:var(--text);}
 
-  .roe-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  @media (max-width:640px){.roe-grid{grid-template-columns:1fr;}}
-  .roe-card{
-    background:linear-gradient(160deg,#1c1607,#141418 70%);
-    border:1px solid #3a2f16;border-radius:16px;padding:24px;text-align:center;
-  }
-  .roe-card .tag{font-size:12px;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
-  .roe-card .num{font-size:36px;font-weight:800;color:var(--gold);}
+.roe-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media (max-width:640px){.roe-grid{grid-template-columns:1fr;}}
+.roe-card{
+background:linear-gradient(160deg,#1c1607,#141418 70%);
+border:1px solid #3a2f16;border-radius:16px;padding:24px;text-align:center;
+}
+.roe-card .tag{font-size:12px;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+.roe-card .num{font-size:36px;font-weight:800;color:var(--gold);}
 
-  .assumptions{margin-top:20px;font-size:11.5px;color:#6d6d78;line-height:1.6;border-top:1px solid var(--border);padding-top:16px;}
+.assumptions{margin-top:20px;font-size:11.5px;color:#6d6d78;line-height:1.6;border-top:1px solid var(--border);padding-top:16px;}
 
-  /* ===== DIAGNOSTICO ===== */
-  table.diag{width:100%;border-collapse:collapse;font-size:13.5px;}
-  table.diag th{
-    text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:0.05em;
-    color:var(--muted);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--border);
-  }
-  table.diag td{padding:16px 14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;}
-  table.diag tr:last-child td{border-bottom:none;}
-  table.diag td.hoy{color:var(--muted);}
-  table.diag td.con-jeeves{color:var(--text);}
-  table.diag td.tema{font-weight:600;color:var(--text);width:22%;}
+/* ===== DIAGNOSTICO ===== */
+table.diag{width:100%;border-collapse:collapse;font-size:13.5px;}
+table.diag th{
+text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:0.05em;
+color:var(--muted);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--border);
+}
+table.diag td{padding:16px 14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;}
+table.diag tr:last-child td{border-bottom:none;}
+table.diag td.hoy{color:var(--muted);}
+table.diag td.con-jeeves{color:var(--text);}
+table.diag td.tema{font-weight:600;color:var(--text);width:22%;}
 
-  /* ===== PLAN SUMMARY ===== */
-  .plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-  @media (max-width:760px){.plan-grid{grid-template-columns:1fr;}}
-  .plan-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;}
-  .plan-card .kicker{font-size:11.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold);font-weight:700;margin-bottom:10px;}
-  .plan-card h3{font-size:19px;margin-bottom:14px;}
-  .plan-card ul{margin:0;padding:0;list-style:none;}
-  .plan-card li{
-    font-size:13.5px;color:var(--muted);padding:9px 0;border-top:1px solid var(--border);
-    display:flex;gap:10px;
-  }
-  .plan-card li:first-child{border-top:none;}
-  .plan-card li .dot{color:var(--green);flex-shrink:0;}
+/* ===== PLAN SUMMARY ===== */
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media (max-width:760px){.plan-grid{grid-template-columns:1fr;}}
+.plan-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;}
+.plan-card .kicker{font-size:11.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold);font-weight:700;margin-bottom:10px;}
+.plan-card h3{font-size:19px;margin-bottom:14px;}
+.plan-card ul{margin:0;padding:0;list-style:none;}
+.plan-card li{
+font-size:13.5px;color:var(--muted);padding:9px 0;border-top:1px solid var(--border);
+display:flex;gap:10px;
+}
+.plan-card li:first-child{border-top:none;}
+.plan-card li .dot{color:var(--green);flex-shrink:0;}
 
-  /* ===== FOOTER ===== */
-  footer{padding:44px 0 60px;border-top:1px solid var(--border);}
-  .sig{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;}
-  .sig h3{font-size:20px;margin-bottom:4px;}
-  .sig .role{font-size:13px;color:var(--muted);}
-  .sig .contact{font-size:13px;color:var(--muted);text-align:right;}
-  .sig .contact a{color:var(--green);text-decoration:none;}
+/* ===== FOOTER ===== */
+footer{padding:44px 0 60px;border-top:1px solid var(--border);}
+.sig{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;}
+.sig h3{font-size:20px;margin-bottom:4px;}
+.sig .role{font-size:13px;color:var(--muted);}
+.sig .contact{font-size:13px;color:var(--muted);text-align:right;}
+.sig .contact a{color:var(--green);text-decoration:none;}
 </style>
 </head>
-<body>
+<body class="locked">
+<style>
+#accessGate{position:fixed;inset:0;z-index:9999;background:#0B0B0E;display:flex;align-items:center;justify-content:center;padding:24px;}
+#accessGate.hidden{display:none;}
+#accessGate .box{max-width:360px;width:100%;background:#141418;border:1px solid #26262E;border-radius:16px;padding:32px 28px;text-align:center;font-family:'Inter Tight','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
+#accessGate .box img{height:26px;margin-bottom:18px;}
+#accessGate h2{font-size:16px;color:#F5F5F7;margin:0 0 8px;font-weight:700;}
+#accessGate p{font-size:13px;color:#9C9CA6;margin:0 0 18px;}
+#accessGate input{width:100%;background:#0B0B0E;border:1px solid #26262E;border-radius:10px;padding:11px 14px;color:#F5F5F7;font-size:14.5px;text-align:center;letter-spacing:1px;box-sizing:border-box;margin-bottom:12px;font-family:inherit;}
+#accessGate button{width:100%;background:#00D68F;border:none;border-radius:10px;padding:11px 14px;color:#0B0B0E;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;}
+#accessGate .err{color:#e5484d;font-size:12.5px;margin-top:10px;display:none;}
+body.locked > :not(#accessGate){display:none !important;}
+</style>
+<div id="accessGate">
+  <div class="box">
+    <img src="jeeves-logo.png" alt="Jeeves"/>
+    <h2>Propuesta privada</h2>
+    <p>Ingresa la clave que te compartimos por correo para ver tu propuesta.</p>
+    <input type="password" id="accessKeyInput" placeholder="Clave de acceso" autocomplete="off"/>
+    <button id="accessKeyBtn" type="button">Entrar</button>
+    <div class="err" id="accessKeyErr">Clave incorrecta, intenta de nuevo.</div>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY = "TEWw7hxfBr";
+  var stored = null;
+  try { stored = sessionStorage.getItem('jeeves_access_ok'); } catch(e){}
+  function unlock(){
+    document.body.classList.remove('locked');
+    document.getElementById('accessGate').classList.add('hidden');
+    try { sessionStorage.setItem('jeeves_access_ok','1'); } catch(e){}
+  }
+  if(stored === '1'){ unlock(); }
+  document.getElementById('accessKeyBtn').addEventListener('click', function(){
+    var val = document.getElementById('accessKeyInput').value.trim();
+    if(val === KEY){ unlock(); }
+    else { document.getElementById('accessKeyErr').style.display='block'; }
+  });
+  document.getElementById('accessKeyInput').addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ document.getElementById('accessKeyBtn').click(); }
+  });
+})();
+</script>
+
 
 <div class="wrap">
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-top">
-      <div class="jeeves-wordmark"><img src="jeeves-logo.png" alt="Jeeves"></div>
-      <div class="client-badge"><img src="vidrioandino-logo.png" alt="Vidrio Andino"></div>
-    </div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+<div class="hero-top">
+<div class="jeeves-wordmark"><img src="jeeves-logo.png" alt="Jeeves"></div>
+<div class="client-badge"><img src="vidrioandino-logo.png" alt="Vidrio Andino"></div>
+</div>
 
-    <div class="addressed">Preparado para <b>Nelson Garaviz</b> · Vidrio Andino y Vidrio Andino Colombia (Saint-Gobain)</div>
+<div class="addressed">Preparado para <b>Nelson Garaviz</b> · Vidrio Andino y Vidrio Andino Colombia (Saint-Gobain)</div>
 
-    <h1 class="hero-title">Compensación estratégica <em>en especie</em>, entregada en segundos por tarjeta</h1>
-    <p class="hero-lead">
-      Jeeves convierte bonificaciones, incentivos y beneficios en especie para los colaboradores de Vidrio Andino
-      y Vidrio Andino Colombia en recargas inmediatas a tarjeta física Mastercard o tarjeta virtual — sin manejo
-      de efectivo, sin impacto en nómina ni parafiscales, y con trazabilidad completa por persona y centro de costo,
-      para un programa combinado de 15 usuarios (12 de Vidrio Andino y 3 de Vidrio Andino Colombia).
-    </p>
+<h1 class="hero-title">Compensación estratégica <em>en especie</em>, entregada en segundos por tarjeta</h1>
+<p class="hero-lead">
+Jeeves convierte bonificaciones, incentivos y beneficios en especie para los colaboradores de Vidrio Andino
+y Vidrio Andino Colombia en recargas inmediatas a tarjeta física Mastercard o tarjeta virtual — sin manejo
+de efectivo, sin impacto en nómina ni parafiscales, y con trazabilidad completa por persona y centro de costo,
+para un programa combinado de 15 usuarios (12 de Vidrio Andino y 3 de Vidrio Andino Colombia).
+</p>
 
-    <div class="hero-photos">
-      <div>
-        <div class="cc-photo cc-world-elite"><img src="jeeves-card-world-elite.png" alt="Tarjeta Jeeves World Elite"></div>
-        <div class="cc-caption">World Elite</div>
-      </div>
-      <div>
-        <div class="cc-photo cc-corporate"><img src="jeeves-card-corporate.png" alt="Tarjeta corporativa Jeeves"></div>
-        <div class="cc-caption">Tarjeta Corporativa</div>
-      </div>
-      <div>
-        <div class="cc-photo cc-virtual"><img src="jeeves-card-virtual.png" alt="Tarjeta virtual Jeeves"></div>
-        <div class="cc-caption">Tarjeta Virtual</div>
-      </div>
-    </div>
-  </section>
+<div class="hero-photos">
+<div>
+<div class="cc-photo cc-world-elite"><img src="jeeves-card-world-elite.png" alt="Tarjeta Jeeves World Elite"></div>
+<div class="cc-caption">World Elite</div>
+</div>
+<div>
+<div class="cc-photo cc-corporate"><img src="jeeves-card-corporate.png" alt="Tarjeta corporativa Jeeves"></div>
+<div class="cc-caption">Tarjeta Corporativa</div>
+</div>
+<div>
+<div class="cc-photo cc-virtual"><img src="jeeves-card-virtual.png" alt="Tarjeta virtual Jeeves"></div>
+<div class="cc-caption">Tarjeta Virtual</div>
+</div>
+</div>
+</section>
 
-  <!-- ===== CALCULADORA ===== -->
-  <section class="section" id="calculadora">
-    <div class="section-tag">Propuesta económica</div>
-    <div class="section-title">Calculadora · Plan Enterprise Platinum</div>
-    <p class="section-sub">Ajusta los valores según lo confirmado con Vidrio Andino. Todos los cálculos son anuales salvo que se indique lo contrario.</p>
+<!-- ===== CALCULADORA ===== -->
+<section class="section" id="calculadora">
+<div class="section-tag">Propuesta económica</div>
+<div class="section-title">Calculadora · Plan Enterprise Platinum</div>
+<p class="section-sub">Ajusta los valores según lo confirmado con Vidrio Andino. Todos los cálculos son anuales salvo que se indique lo contrario.</p>
 
-    <div class="calc-grid">
-      <!-- Plan -->
-      <div class="calc-card">
-        <h3>💼 Plan de la Plataforma</h3>
-        <div class="field">
-          <label>Plan de la Plataforma</label>
-          <div class="fixed">Platinum</div>
-        </div>
-        <div class="field">
-          <label>Valor Anual del Plan (USD)</label>
-          <input type="number" id="valorPlanUSD" value="20000" step="100">
-          <span class="hint">Plan combinado: Vidrio Andino + Vidrio Andino Colombia en una sola razón facturable, en lugar de USD $15.000 por cada compañía por separado.</span>
-        </div>
-        <div class="field">
-          <label>TRM del día (COP/USD)</label>
-          <input type="number" id="trm" value="3062.96" step="0.01">
-          <span class="hint">TRM oficial Banco de la República — 21 de agosto de 2026</span>
-        </div>
-        <div class="field">
-          <label>Costo Anual de la Plataforma (COP)</label>
-          <input type="text" id="valorPlanCOP" disabled value="—">
-          <span class="hint">Valor Anual del Plan × TRM del día</span>
-        </div>
-        <div class="field">
-          <label>Gasto mensual en tarjetas (COP)</label>
-          <input type="number" id="gastoMensualTarjetas" value="300000000" step="1000000">
-        </div>
-        <div class="field">
-          <label>🎁 Cashback 1% · primeros 6 meses</label>
-          <input type="text" id="cashbackPreview" disabled value="—">
-        </div>
-      </div>
+<div class="calc-grid">
+<!-- Plan -->
+<div class="calc-card">
+<h3>💼 Plan de la Plataforma</h3>
+<div class="field">
+<label>Plan de la Plataforma</label>
+<div class="fixed">Platinum</div>
+</div>
+<div class="field">
+<label>Valor Anual del Plan (USD)</label>
+<input type="number" id="valorPlanUSD" value="20000" step="100">
+<span class="hint">Plan combinado: Vidrio Andino + Vidrio Andino Colombia en una sola razón facturable, en lugar de USD $15.000 por cada compañía por separado.</span>
+</div>
+<div class="field">
+<label>TRM del día (COP/USD)</label>
+<input type="number" id="trm" value="3062.96" step="0.01">
+<span class="hint">TRM oficial Banco de la República — 21 de agosto de 2026</span>
+</div>
+<div class="field">
+<label>Costo Anual de la Plataforma (COP)</label>
+<input type="text" id="valorPlanCOP" disabled value="—">
+<span class="hint">Valor Anual del Plan × TRM del día</span>
+</div>
+<div class="field">
+<label>Gasto mensual en tarjetas (COP)</label>
+<input type="number" id="gastoMensualTarjetas" value="300000000" step="1000000">
+</div>
+<div class="field">
+<label>🎁 Cashback 1% · primeros 6 meses</label>
+<input type="text" id="cashbackPreview" disabled value="—">
+</div>
+</div>
 
-      <!-- Modulo automatizacion -->
-      <div class="calc-card">
-        <div class="toggle-row">
-          <h3 style="margin-bottom:0;">💳 Ahorro por Automatización Recarga de Tarjetas</h3>
-          <label class="switch">
-            <input type="checkbox" id="toggleAutomatizacion" checked>
-            <span class="slider"></span>
-          </label>
-        </div>
-        <div class="field">
-          <label>Salario mensual operativo (COP)</label>
-          <input type="number" id="salarioMensual" value="3500000" step="50000">
-        </div>
-        <div class="two-col">
-          <div class="field">
-            <label>Recargas procesadas al mes</label>
-            <input type="number" id="recargasMes" value="65" step="1">
-          </div>
-          <div class="field">
-            <label>Minutos por recarga (captura manual)</label>
-            <input type="number" id="minutosPorRecarga" value="8" step="1">
-          </div>
-        </div>
-        <div class="field">
-          <label>Horas trabajadas al mes</label>
-          <input type="number" id="horasTrabajadas" value="160" step="1">
-        </div>
-        <div class="field" style="margin-bottom:0;">
-          <span class="hint" id="automatizacionBreakdown" style="display:block;">—</span>
-        </div>
-      </div>
-    </div>
+<!-- Modulo automatizacion -->
+<div class="calc-card">
+<div class="toggle-row">
+<h3 style="margin-bottom:0;">💳 Ahorro por Automatización Recarga de Tarjetas</h3>
+<label class="switch">
+<input type="checkbox" id="toggleAutomatizacion" checked>
+<span class="slider"></span>
+</label>
+</div>
+<div class="field">
+<label>Salario mensual operativo (COP)</label>
+<input type="number" id="salarioMensual" value="3500000" step="50000">
+</div>
+<div class="two-col">
+<div class="field">
+<label>Recargas procesadas al mes</label>
+<input type="number" id="recargasMes" value="65" step="1">
+</div>
+<div class="field">
+<label>Minutos por recarga (captura manual)</label>
+<input type="number" id="minutosPorRecarga" value="8" step="1">
+</div>
+</div>
+<div class="field">
+<label>Horas trabajadas al mes</label>
+<input type="number" id="horasTrabajadas" value="160" step="1">
+</div>
+<div class="field" style="margin-bottom:0;">
+<span class="hint" id="automatizacionBreakdown" style="display:block;">—</span>
+</div>
+</div>
+</div>
 
-    <!-- RESULTADOS -->
-    <div class="results">
-      <h3>Ahorros por rubro · Anual</h3>
-      <div class="rubro-grid">
-        <div class="rubro-card">
-          <div class="lbl">🎁 Cashback (primeros 6 meses)</div>
-          <div class="val" id="rCashback">—</div>
-        </div>
-        <div class="rubro-card">
-          <div class="lbl">💳 Automatización Recarga de Tarjetas</div>
-          <div class="val" id="rAutomatizacion">—</div>
-        </div>
-      </div>
+<!-- RESULTADOS -->
+<div class="results">
+<h3>Ahorros por rubro · Anual</h3>
+<div class="rubro-grid">
+<div class="rubro-card">
+<div class="lbl">🎁 Cashback (primeros 6 meses)</div>
+<div class="val" id="rCashback">—</div>
+</div>
+<div class="rubro-card">
+<div class="lbl">💳 Automatización Recarga de Tarjetas</div>
+<div class="val" id="rAutomatizacion">—</div>
+</div>
+</div>
 
-      <div class="totales-grid">
-        <div class="total-card">
-          <div class="lbl">Ahorro Total · Primer Año</div>
-          <div class="val" id="totalAno1">—</div>
-          <div class="neto">Menos costo de plataforma (<span id="costoPlataformaLbl1">—</span>) = <b id="netoAno1">—</b> neto</div>
-        </div>
-        <div class="total-card">
-          <div class="lbl">Ahorro Total · A partir del segundo año</div>
-          <div class="val" id="totalAno2">—</div>
-          <div class="neto">Menos costo de plataforma (<span id="costoPlataformaLbl2">—</span>) = <b id="netoAno2">—</b> neto</div>
-        </div>
-      </div>
+<div class="totales-grid">
+<div class="total-card">
+<div class="lbl">Ahorro Total · Primer Año</div>
+<div class="val" id="totalAno1">—</div>
+<div class="neto">Menos costo de plataforma (<span id="costoPlataformaLbl1">—</span>) = <b id="netoAno1">—</b> neto</div>
+</div>
+<div class="total-card">
+<div class="lbl">Ahorro Total · A partir del segundo año</div>
+<div class="val" id="totalAno2">—</div>
+<div class="neto">Menos costo de plataforma (<span id="costoPlataformaLbl2">—</span>) = <b id="netoAno2">—</b> neto</div>
+</div>
+</div>
 
-      <div class="assumptions">
-        Supuestos ajustables: recargas procesadas al mes, salario mensual operativo y horas trabajadas al mes son estimaciones
-        de referencia — deben confirmarse con Vidrio Andino para afinar el cálculo. El cashback aplica únicamente durante los
-        primeros 6 meses del contrato. Los ahorros mostrados reflejan exclusivamente lo cuantificable dentro de esta
-        calculadora; no incluyen el valor estratégico de evitar cargas prestacionales y parafiscales al entregar el
-        beneficio en especie en lugar de vía nómina, ni la reducción de riesgo operativo por manejo de efectivo.
-      </div>
-    </div>
-  </section>
+<div class="assumptions">
+Supuestos ajustables: recargas procesadas al mes, salario mensual operativo y horas trabajadas al mes son estimaciones
+de referencia — deben confirmarse con Vidrio Andino para afinar el cálculo. El cashback aplica únicamente durante los
+primeros 6 meses del contrato. Los ahorros mostrados reflejan exclusivamente lo cuantificable dentro de esta
+calculadora; no incluyen el valor estratégico de evitar cargas prestacionales y parafiscales al entregar el
+beneficio en especie en lugar de vía nómina, ni la reducción de riesgo operativo por manejo de efectivo.
+</div>
+</div>
+</section>
 
-  <!-- ===== DIAGNÓSTICO ===== -->
-  <section class="section" id="diagnostico">
-    <div class="section-tag">Diagnóstico</div>
-    <div class="section-title">De la compensación tradicional al pago en especie con Jeeves</div>
-    <table class="diag">
-      <tr>
-        <th>Tema</th>
-        <th>Hoy</th>
-        <th>Con Jeeves</th>
-      </tr>
-      <tr>
-        <td class="tema">Entrega del beneficio</td>
-        <td class="hoy">Compensación estratégica gestionada con Klara, cuya tarifa mensual subió de $600.000 a $12.000.000, con el extracto y la facturación a nombre de una entidad distinta a la que presta el servicio.</td>
-        <td class="con-jeeves">Recarga instantánea a tarjeta física o virtual, con facturación directa a nombre de Jeeves Technology, sin intermediarios ni confusiones de conciliación.</td>
-      </tr>
-      <tr>
-        <td class="tema">Facturación por razón social</td>
-        <td class="hoy">Vidrio Andino y Vidrio Andino Colombia se gestionan como dos razones sociales separadas, cada una facturada de forma independiente por el proveedor actual.</td>
-        <td class="con-jeeves">Un solo plan Platinum combinado por USD $20.000 anuales para ambas razones sociales, en lugar de USD $15.000 por cada una por separado.</td>
-      </tr>
-      <tr>
-        <td class="tema">Trazabilidad y control</td>
-        <td class="hoy">Conciliación manual y poca visibilidad sobre el uso real de cada beneficio entregado.</td>
-        <td class="con-jeeves">Dashboard en tiempo real con reportes por colaborador, compañía y categoría de consumo, alineados al pacto laboral.</td>
-      </tr>
-      <tr>
-        <td class="tema">Independencia jurídica</td>
-        <td class="hoy">El proveedor actual genera dudas al operar a través de un tercero, distinto a la razón social que presta el servicio.</td>
-        <td class="con-jeeves">Jeeves no opera como patrimonio autónomo ni a través de terceros; extracto y facturación siempre a nombre de Jeeves Technology.</td>
-      </tr>
-    </table>
-  </section>
+<!-- ===== DIAGNÓSTICO ===== -->
+<section class="section" id="diagnostico">
+<div class="section-tag">Diagnóstico</div>
+<div class="section-title">De la compensación tradicional al pago en especie con Jeeves</div>
+<table class="diag">
+<tr>
+<th>Tema</th>
+<th>Hoy</th>
+<th>Con Jeeves</th>
+</tr>
+<tr>
+<td class="tema">Entrega del beneficio</td>
+<td class="hoy">Compensación estratégica gestionada con Klara, cuya tarifa mensual subió de $600.000 a $12.000.000, con el extracto y la facturación a nombre de una entidad distinta a la que presta el servicio.</td>
+<td class="con-jeeves">Recarga instantánea a tarjeta física o virtual, con facturación directa a nombre de Jeeves Technology, sin intermediarios ni confusiones de conciliación.</td>
+</tr>
+<tr>
+<td class="tema">Facturación por razón social</td>
+<td class="hoy">Vidrio Andino y Vidrio Andino Colombia se gestionan como dos razones sociales separadas, cada una facturada de forma independiente por el proveedor actual.</td>
+<td class="con-jeeves">Un solo plan Platinum combinado por USD $20.000 anuales para ambas razones sociales, en lugar de USD $15.000 por cada una por separado.</td>
+</tr>
+<tr>
+<td class="tema">Trazabilidad y control</td>
+<td class="hoy">Conciliación manual y poca visibilidad sobre el uso real de cada beneficio entregado.</td>
+<td class="con-jeeves">Dashboard en tiempo real con reportes por colaborador, compañía y categoría de consumo, alineados al pacto laboral.</td>
+</tr>
+<tr>
+<td class="tema">Independencia jurídica</td>
+<td class="hoy">El proveedor actual genera dudas al operar a través de un tercero, distinto a la razón social que presta el servicio.</td>
+<td class="con-jeeves">Jeeves no opera como patrimonio autónomo ni a través de terceros; extracto y facturación siempre a nombre de Jeeves Technology.</td>
+</tr>
+</table>
+</section>
 
-  <!-- ===== RESUMEN DEL PLAN ===== -->
-  <section class="section" id="resumen">
-    <div class="section-tag">Resumen</div>
-    <div class="section-title">Lo que incluye la propuesta para Vidrio Andino</div>
-    <div class="plan-grid">
-      <div class="plan-card">
-        <div class="kicker">Plataforma</div>
-        <h3>Plan Enterprise Platinum</h3>
-        <ul>
-          <li><span class="dot">●</span> Acceso completo al ecosistema Jeeves: tarjetas físicas y virtuales, pagos y línea de crédito.</li>
-          <li><span class="dot">●</span> Límites de gasto y cupos configurables por colaborador o centro de costo.</li>
-          <li><span class="dot">●</span> Soporte prioritario y acompañamiento dedicado durante la implementación.</li>
-          <li><span class="dot">●</span> Reportería y monitoreo en tiempo real desde un solo panel.</li>
-        </ul>
-      </div>
-      <div class="plan-card">
-        <div class="kicker">Programa</div>
-        <h3>Pagos en Especie · Recarga de Tarjetas</h3>
-        <ul>
-          <li><span class="dot">●</span> Tarjeta física Mastercard + tarjeta virtual para cada uno de los 15 colaboradores (Vidrio Andino y Vidrio Andino Colombia).</li>
-          <li><span class="dot">●</span> Recargas masivas mensuales programadas desde un solo flujo de aprobación.</li>
-          <li><span class="dot">●</span> Beneficio entregado sin impacto en nómina ni cargas prestacionales/parafiscales.</li>
-          <li><span class="dot">●</span> Trazabilidad completa: quién recibió, cuánto, cuándo y dónde se utilizó.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<!-- ===== RESUMEN DEL PLAN ===== -->
+<section class="section" id="resumen">
+<div class="section-tag">Resumen</div>
+<div class="section-title">Lo que incluye la propuesta para Vidrio Andino</div>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="kicker">Plataforma</div>
+<h3>Plan Enterprise Platinum</h3>
+<ul>
+<li><span class="dot">●</span> Acceso completo al ecosistema Jeeves: tarjetas físicas y virtuales, pagos y línea de crédito.</li>
+<li><span class="dot">●</span> Límites de gasto y cupos configurables por colaborador o centro de costo.</li>
+<li><span class="dot">●</span> Soporte prioritario y acompañamiento dedicado durante la implementación.</li>
+<li><span class="dot">●</span> Reportería y monitoreo en tiempo real desde un solo panel.</li>
+</ul>
+</div>
+<div class="plan-card">
+<div class="kicker">Programa</div>
+<h3>Pagos en Especie · Recarga de Tarjetas</h3>
+<ul>
+<li><span class="dot">●</span> Tarjeta física Mastercard + tarjeta virtual para cada uno de los 15 colaboradores (Vidrio Andino y Vidrio Andino Colombia).</li>
+<li><span class="dot">●</span> Recargas masivas mensuales programadas desde un solo flujo de aprobación.</li>
+<li><span class="dot">●</span> Beneficio entregado sin impacto en nómina ni cargas prestacionales/parafiscales.</li>
+<li><span class="dot">●</span> Trazabilidad completa: quién recibió, cuánto, cuándo y dónde se utilizó.</li>
+</ul>
+</div>
+</div>
+</section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="sig">
-      <div>
-        <h3>Carlos Gómez</h3>
-        <div class="role">Senior Enterprise AE Colombia · Jeeves</div>
-      </div>
-      <div class="contact">
-        <a href="mailto:carlos.gomez@tryjeeves.com">carlos.gomez@tryjeeves.com</a><br>
-        GTM Jeeves
-      </div>
-    </div>
-  </footer>
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="sig">
+<div>
+<h3>Carlos Gómez</h3>
+<div class="role">Senior Enterprise AE Colombia · Jeeves</div>
+</div>
+<div class="contact">
+<a href="mailto:carlos.gomez@tryjeeves.com">carlos.gomez@tryjeeves.com</a><br>
+GTM Jeeves
+</div>
+</div>
+</footer>
 </div>
 
 <script>
 function fmtCOP(n){
-  return '$' + Math.round(n).toLocaleString('es-CO') + ' COP';
+return '$' + Math.round(n).toLocaleString('es-CO') + ' COP';
 }
 function fmtUSD(n){
-  return 'USD $' + Math.round(n).toLocaleString('en-US');
+return 'USD $' + Math.round(n).toLocaleString('en-US');
 }
 function fmtPct(n){
-  const sign = n >= 0 ? '+' : '';
-  return sign + n.toFixed(1) + '%';
+const sign = n >= 0 ? '+' : '';
+return sign + n.toFixed(1) + '%';
 }
 
 function calcular(){
-  const valorPlanUSD = parseFloat(document.getElementById('valorPlanUSD').value) || 0;
-  const trm = parseFloat(document.getElementById('trm').value) || 0;
-  const gastoMensualTarjetas = parseFloat(document.getElementById('gastoMensualTarjetas').value) || 0;
-  const salarioMensual = parseFloat(document.getElementById('salarioMensual').value) || 0;
-  const recargasMes = parseFloat(document.getElementById('recargasMes').value) || 0;
-  const minutosPorRecarga = parseFloat(document.getElementById('minutosPorRecarga').value) || 0;
-  const horasTrabajadas = parseFloat(document.getElementById('horasTrabajadas').value) || 1;
-  const automatizacionOn = document.getElementById('toggleAutomatizacion').checked;
+const valorPlanUSD = parseFloat(document.getElementById('valorPlanUSD').value) || 0;
+const trm = parseFloat(document.getElementById('trm').value) || 0;
+const gastoMensualTarjetas = parseFloat(document.getElementById('gastoMensualTarjetas').value) || 0;
+const salarioMensual = parseFloat(document.getElementById('salarioMensual').value) || 0;
+const recargasMes = parseFloat(document.getElementById('recargasMes').value) || 0;
+const minutosPorRecarga = parseFloat(document.getElementById('minutosPorRecarga').value) || 0;
+const horasTrabajadas = parseFloat(document.getElementById('horasTrabajadas').value) || 1;
+const automatizacionOn = document.getElementById('toggleAutomatizacion').checked;
 
-  // Costo de la plataforma: valor del plan (USD) convertido a COP con la TRM del día.
-  const costoAnualPlataforma = valorPlanUSD * trm;
+// Costo de la plataforma: valor del plan (USD) convertido a COP con la TRM del día.
+const costoAnualPlataforma = valorPlanUSD * trm;
 
-  // Cashback 1% sobre el gasto en tarjetas, aplicado únicamente los primeros 6 meses.
-  const ahorroCashback = gastoMensualTarjetas * 6 * 0.01;
+// Cashback 1% sobre el gasto en tarjetas, aplicado únicamente los primeros 6 meses.
+const ahorroCashback = gastoMensualTarjetas * 6 * 0.01;
 
-  // Automatización de recarga de tarjetas: horas de captura manual evitadas × costo/hora × 12 meses.
-  const costoHora = salarioMensual / horasTrabajadas;
-  const horasCapturaMes = recargasMes * (minutosPorRecarga / 60);
-  const ahorroAutomatizacion = automatizacionOn ? (horasCapturaMes * costoHora * 12) : 0;
+// Automatización de recarga de tarjetas: horas de captura manual evitadas × costo/hora × 12 meses.
+const costoHora = salarioMensual / horasTrabajadas;
+const horasCapturaMes = recargasMes * (minutosPorRecarga / 60);
+const ahorroAutomatizacion = automatizacionOn ? (horasCapturaMes * costoHora * 12) : 0;
 
-  const totalAno1 = ahorroCashback + ahorroAutomatizacion;
-  const totalAno2 = ahorroAutomatizacion;
+const totalAno1 = ahorroCashback + ahorroAutomatizacion;
+const totalAno2 = ahorroAutomatizacion;
 
-  const netoAno1 = totalAno1 - costoAnualPlataforma;
-  const netoAno2 = totalAno2 - costoAnualPlataforma;
+const netoAno1 = totalAno1 - costoAnualPlataforma;
+const netoAno2 = totalAno2 - costoAnualPlataforma;
 
-  document.getElementById('valorPlanCOP').value = fmtCOP(costoAnualPlataforma);
-  document.getElementById('cashbackPreview').value = fmtCOP(ahorroCashback) + ' (año 1)';
+document.getElementById('valorPlanCOP').value = fmtCOP(costoAnualPlataforma);
+document.getElementById('cashbackPreview').value = fmtCOP(ahorroCashback) + ' (año 1)';
 
-  document.getElementById('rCashback').textContent = fmtCOP(ahorroCashback);
-  document.getElementById('rAutomatizacion').textContent = fmtCOP(ahorroAutomatizacion);
+document.getElementById('rCashback').textContent = fmtCOP(ahorroCashback);
+document.getElementById('rAutomatizacion').textContent = fmtCOP(ahorroAutomatizacion);
 
-  document.getElementById('totalAno1').textContent = fmtCOP(totalAno1);
-  document.getElementById('totalAno2').textContent = fmtCOP(totalAno2);
+document.getElementById('totalAno1').textContent = fmtCOP(totalAno1);
+document.getElementById('totalAno2').textContent = fmtCOP(totalAno2);
 
-  document.getElementById('costoPlataformaLbl1').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanUSD);
-  document.getElementById('costoPlataformaLbl2').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanUSD);
+document.getElementById('costoPlataformaLbl1').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanUSD);
+document.getElementById('costoPlataformaLbl2').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanUSD);
 
-  document.getElementById('netoAno1').textContent = fmtCOP(netoAno1);
-  document.getElementById('netoAno2').textContent = fmtCOP(netoAno2);
+document.getElementById('netoAno1').textContent = fmtCOP(netoAno1);
+document.getElementById('netoAno2').textContent = fmtCOP(netoAno2);
 
-  document.getElementById('automatizacionBreakdown').textContent =
-    automatizacionOn
-      ? ('= ' + horasCapturaMes.toFixed(1) + ' h/mes de captura manual evitadas × ' + fmtCOP(costoHora) + '/hora × 12 meses')
-      : 'Módulo desactivado — no se suma al ahorro total.';
+document.getElementById('automatizacionBreakdown').textContent =
+automatizacionOn
+? ('= ' + horasCapturaMes.toFixed(1) + ' h/mes de captura manual evitadas × ' + fmtCOP(costoHora) + '/hora × 12 meses')
+: 'Módulo desactivado — no se suma al ahorro total.';
 }
 
 document.querySelectorAll('#calculadora input').forEach(el => {
-  el.addEventListener('input', calcular);
-  el.addEventListener('change', calcular);
+el.addEventListener('input', calcular);
+el.addEventListener('change', calcular);
 });
 
 calcular();
