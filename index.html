@@ -122,6 +122,8 @@ border:1px solid #3a2f16;border-radius:16px;padding:24px;text-align:center;
 }
 .roe-card .tag{font-size:12px;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
 .roe-card .num{font-size:36px;font-weight:800;color:var(--gold);}
+.comp-block{margin-bottom:40px;padding-bottom:8px;}
+.comp-title{font-family:'Inter Tight',sans-serif;font-size:20px;font-weight:700;margin-bottom:14px;color:var(--text);}
 .promo{display:inline-flex;align-items:center;gap:10px;background:#0f2a1f;border:1px solid #145c40;color:var(--green);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600;margin-bottom:22px;}
 .promo s{color:var(--muted);font-weight:500;}
 
@@ -216,15 +218,15 @@ body.locked > :not(#accessGate){display:none !important;}
 <div class="client-badge"><img src="vidrioandino-logo.png" alt="Vidrio Andino"></div>
 </div>
 
-<div class="addressed">Preparado para <b>Nelson Garaviz</b> · Vidrio Andino y Vidrio Andino Colombia (Saint-Gobain)</div>
+<div class="addressed">Preparado para <b>Nelson Garaviz</b> · Vidrio Andino, Vidrio Andino Colombia y Fiberglass (Saint-Gobain)</div>
 
-<div class="promo">⭐ Condición especial · 50% de descuento: <s>USD $20.000</s> → USD $10.000/año (USD $5.000 por compañía)</div>
+<div class="promo">⭐ Condición especial · USD $5.000/año por compañía (USD $416,67/mes) · 50% menos que la propuesta anterior</div>
 <h1 class="hero-title">Compensación estratégica <em>en especie</em>, entregada en segundos por tarjeta</h1>
 <p class="hero-lead">
-Jeeves convierte bonificaciones, incentivos y beneficios en especie para los colaboradores de Vidrio Andino
-y Vidrio Andino Colombia en recargas inmediatas a tarjeta física Mastercard o tarjeta virtual — sin manejo
+Jeeves convierte bonificaciones, incentivos y beneficios en especie para los colaboradores de Vidrio Andino,
+Vidrio Andino Colombia y Fiberglass en recargas inmediatas a tarjeta física Mastercard o tarjeta virtual — sin manejo
 de efectivo, sin impacto en nómina ni parafiscales, y con trazabilidad completa por persona y centro de costo,
-para un programa combinado de 15 usuarios (12 de Vidrio Andino y 3 de Vidrio Andino Colombia).
+con un plan independiente para cada compañía.
 </p>
 
 <div class="hero-photos">
@@ -246,117 +248,128 @@ para un programa combinado de 15 usuarios (12 de Vidrio Andino y 3 de Vidrio And
 <!-- ===== CALCULADORA ===== -->
 <section class="section" id="calculadora">
 <div class="section-tag">Propuesta económica</div>
-<div class="section-title">Calculadora · Plan Enterprise Platinum</div>
-<p class="section-sub">Ajusta los valores según lo confirmado con Vidrio Andino. Todos los cálculos son anuales salvo que se indique lo contrario.</p>
-
+<div class="section-title">Calculadora · Plan Enterprise Platinum por compañía</div>
+<p class="section-sub">Cada compañía tiene su propio contrato de uso y Order Form por NIT, por eso el costo y los ahorros se calculan por separado. Todos los ahorros son anuales; ajusta los valores según lo confirmado con Vidrio Andino.</p>
 <div class="calc-grid">
-<!-- Plan -->
 <div class="calc-card">
 <h3>💼 Plan de la Plataforma</h3>
-<div class="field">
-<label>Plan de la Plataforma</label>
-<div class="fixed">Platinum</div>
-</div>
+<div class="field"><label>Plan de la Plataforma</label><div class="fixed">Platinum</div></div>
 <div class="field">
 <label>Valor Anual del Plan (USD) · por compañía</label>
 <input type="number" id="valorPlanUSD" value="5000" step="100">
-<span class="hint">Condición especial: USD $5.000 por compañía al año (Vidrio Andino S.A.S. y Vidrio Andino Colombia S.A.S., con Order Form individual por NIT) — 50% menos que la propuesta anterior de USD $20.000 combinados.</span>
-</div>
-<div class="field">
-<label>Número de compañías</label>
-<div class="fixed">2</div>
-</div>
-<div class="field">
-<label>Valor Mensual del Plan (USD / COP)</label>
-<input type="text" id="valorMensual" disabled value="—">
-<span class="hint" id="valorMensualHint">—</span>
+<span class="hint">Aplica para Vidrio Andino S.A.S., Vidrio Andino Colombia S.A.S. y Fiberglass S.A.S. — 50% menos que la propuesta anterior de USD $20.000 combinados para las dos primeras.</span>
 </div>
 <div class="field">
 <label>TRM del día (COP/USD)</label>
-<input type="number" id="trm" value="3062.96" step="0.01">
-<span class="hint">TRM oficial Banco de la República — 21 de agosto de 2026</span>
+<input type="number" id="trm" value="3238.88" step="0.01">
+<span class="hint">TRM oficial Banco de la República — 8 de octubre de 2026</span>
 </div>
 <div class="field">
-<label>Costo Anual de la Plataforma (COP)</label>
+<label>Costo Anual de la Plataforma por compañía (COP)</label>
 <input type="text" id="valorPlanCOP" disabled value="—">
-<span class="hint">Valor Anual del Plan × 2 compañías × TRM del día</span>
-</div>
-<div class="field">
-<label>Gasto mensual en tarjetas (COP)</label>
-<input type="number" id="gastoMensualTarjetas" value="300000000" step="1000000">
-</div>
-<div class="field">
-<label>🎁 Cashback 1% · primeros 6 meses</label>
-<input type="text" id="cashbackPreview" disabled value="—">
-</div>
-</div>
-
-<!-- Modulo automatizacion -->
-<div class="calc-card">
-<div class="toggle-row">
-<h3 style="margin-bottom:0;">💳 Ahorro por Automatización Recarga de Tarjetas</h3>
-<label class="switch">
-<input type="checkbox" id="toggleAutomatizacion" checked>
-<span class="slider"></span>
-</label>
-</div>
-<div class="field">
-<label>Salario mensual operativo (COP)</label>
-<input type="number" id="salarioMensual" value="3500000" step="50000">
-</div>
-<div class="two-col">
-<div class="field">
-<label>Recargas procesadas al mes</label>
-<input type="number" id="recargasMes" value="65" step="1">
-</div>
-<div class="field">
-<label>Minutos por recarga (captura manual)</label>
-<input type="number" id="minutosPorRecarga" value="8" step="1">
-</div>
-</div>
-<div class="field">
-<label>Horas trabajadas al mes</label>
-<input type="number" id="horasTrabajadas" value="160" step="1">
+<span class="hint">Valor Anual del Plan × TRM del día</span>
 </div>
 <div class="field" style="margin-bottom:0;">
-<span class="hint" id="automatizacionBreakdown" style="display:block;">—</span>
+<label>Valor Mensual del Plan por compañía (USD / COP)</label>
+<input type="text" id="valorMensual" disabled value="—">
+<span class="hint">💡 También podemos facturar el plan de forma mensual, en lugar de un único cobro anual.</span>
+</div>
+</div>
+<div class="calc-card">
+<div class="toggle-row">
+<h3 style="margin-bottom:0;">💳 Automatización Recarga de Tarjetas</h3>
+<label class="switch"><input type="checkbox" id="toggleAutomatizacion" checked><span class="slider"></span></label>
+</div>
+<div class="field"><label>Salario mensual operativo (COP)</label><input type="number" id="salarioMensual" value="3500000" step="50000"></div>
+<div class="two-col">
+<div class="field"><label>Minutos por recarga (captura manual)</label><input type="number" id="minutosPorRecarga" value="8" step="1"></div>
+<div class="field"><label>Horas trabajadas al mes</label><input type="number" id="horasTrabajadas" value="160" step="1"></div>
+</div>
+<span class="hint">Supuestos de referencia, aplican a las tres compañías.</span>
+</div>
+<div class="calc-card">
+<h3>🏢 Vidrio Andino S.A.S.</h3>
+<div class="field">
+<label>Gasto mensual en tarjetas (COP)</label>
+<input type="number" id="gastoVA" value="80000000" step="1000000">
+</div>
+<div class="field">
+<label>Recargas procesadas al mes</label>
+<input type="number" id="recargasVA" value="52" step="1">
+</div>
+<div class="field" style="margin-bottom:0;">
+<span class="hint" id="breakdownVA" style="display:block;">—</span>
+</div>
+</div>
+<div class="calc-card">
+<h3>🏢 Vidrio Andino Colombia S.A.S.</h3>
+<div class="field">
+<label>Gasto mensual en tarjetas (COP)</label>
+<input type="number" id="gastoVAC" value="50000000" step="1000000">
+</div>
+<div class="field">
+<label>Recargas procesadas al mes</label>
+<input type="number" id="recargasVAC" value="13" step="1">
+</div>
+<div class="field" style="margin-bottom:0;">
+<span class="hint" id="breakdownVAC" style="display:block;">—</span>
+</div>
+</div>
+<div class="calc-card">
+<h3>🏢 Fiberglass S.A.S.</h3>
+<div class="field">
+<label>Gasto mensual en tarjetas (COP)</label>
+<input type="number" id="gastoFG" value="100000000" step="1000000">
+</div>
+<div class="field">
+<label>Recargas procesadas al mes</label>
+<input type="number" id="recargasFG" value="50" step="1">
+</div>
+<div class="field" style="margin-bottom:0;">
+<span class="hint" id="breakdownFG" style="display:block;">—</span>
 </div>
 </div>
 </div>
-
-<!-- RESULTADOS -->
 <div class="results">
+<div class="comp-block">
+<div class="comp-title">Vidrio Andino S.A.S.</div>
 <h3>Ahorros por rubro · Anual</h3>
 <div class="rubro-grid">
-<div class="rubro-card">
-<div class="lbl">🎁 Cashback (primeros 6 meses)</div>
-<div class="val" id="rCashback">—</div>
+<div class="rubro-card"><div class="lbl">🎁 Cashback (primeros 6 meses)</div><div class="val" id="rCashbackVA">—</div></div>
+<div class="rubro-card"><div class="lbl">💳 Automatización Recarga de Tarjetas</div><div class="val" id="rAutoVA">—</div></div>
 </div>
-<div class="rubro-card">
-<div class="lbl">💳 Automatización Recarga de Tarjetas</div>
-<div class="val" id="rAutomatizacion">—</div>
+<div class="totales-grid" style="grid-template-columns:1fr;">
+<div class="total-card"><div class="lbl">Ahorro Total Anual</div><div class="val" id="total1VA">—</div></div>
 </div>
 </div>
-
-<div class="totales-grid">
-<div class="total-card">
-<div class="lbl">Ahorro Total · Primer Año</div>
-<div class="val" id="totalAno1">—</div>
-<div class="neto">Menos costo de plataforma (<span id="costoPlataformaLbl1">—</span>) = <b id="netoAno1">—</b> neto</div>
+<div class="comp-block">
+<div class="comp-title">Vidrio Andino Colombia S.A.S.</div>
+<h3>Ahorros por rubro · Anual</h3>
+<div class="rubro-grid">
+<div class="rubro-card"><div class="lbl">🎁 Cashback (primeros 6 meses)</div><div class="val" id="rCashbackVAC">—</div></div>
+<div class="rubro-card"><div class="lbl">💳 Automatización Recarga de Tarjetas</div><div class="val" id="rAutoVAC">—</div></div>
 </div>
-<div class="total-card">
-<div class="lbl">Ahorro Total · A partir del segundo año</div>
-<div class="val" id="totalAno2">—</div>
-<div class="neto">Menos costo de plataforma (<span id="costoPlataformaLbl2">—</span>) = <b id="netoAno2">—</b> neto</div>
+<div class="totales-grid" style="grid-template-columns:1fr;">
+<div class="total-card"><div class="lbl">Ahorro Total Anual</div><div class="val" id="total1VAC">—</div></div>
 </div>
 </div>
-
+<div class="comp-block">
+<div class="comp-title">Fiberglass S.A.S.</div>
+<h3>Ahorros por rubro · Anual</h3>
+<div class="rubro-grid">
+<div class="rubro-card"><div class="lbl">🎁 Cashback (primeros 6 meses)</div><div class="val" id="rCashbackFG">—</div></div>
+<div class="rubro-card"><div class="lbl">💳 Automatización Recarga de Tarjetas</div><div class="val" id="rAutoFG">—</div></div>
+</div>
+<div class="totales-grid" style="grid-template-columns:1fr;">
+<div class="total-card"><div class="lbl">Ahorro Total Anual</div><div class="val" id="total1FG">—</div></div>
+</div>
+</div>
 <div class="assumptions">
-Supuestos ajustables: recargas procesadas al mes, salario mensual operativo y horas trabajadas al mes son estimaciones
-de referencia — deben confirmarse con Vidrio Andino para afinar el cálculo. El cashback aplica únicamente durante los
-primeros 6 meses del contrato. Los ahorros mostrados reflejan exclusivamente lo cuantificable dentro de esta
-calculadora; no incluyen el valor estratégico de evitar cargas prestacionales y parafiscales al entregar el
-beneficio en especie en lugar de vía nómina, ni la reducción de riesgo operativo por manejo de efectivo.
+Supuestos ajustables: las recargas de Vidrio Andino y Vidrio Andino Colombia se estimaron en proporción a sus usuarios (12 y 3 de un total de 65 recargas al mes), y las de Fiberglass en proporción a su gasto en tarjetas;
+el salario operativo, los minutos por recarga y las horas trabajadas son estimaciones de referencia que deben confirmarse con Vidrio Andino.
+El cashback aplica durante los primeros 6 meses del contrato. Los ahorros mostrados reflejan exclusivamente lo cuantificable dentro de esta calculadora;
+no incluyen el valor estratégico de evitar cargas prestacionales y parafiscales al entregar el beneficio en especie en lugar de vía nómina,
+ni la reducción de riesgo operativo por manejo de efectivo.
 </div>
 </div>
 </section>
@@ -378,8 +391,8 @@ beneficio en especie en lugar de vía nómina, ni la reducción de riesgo operat
 </tr>
 <tr>
 <td class="tema">Facturación por razón social</td>
-<td class="hoy">Vidrio Andino y Vidrio Andino Colombia se gestionan como dos razones sociales separadas, cada una facturada de forma independiente por el proveedor actual.</td>
-<td class="con-jeeves">Plan Platinum por USD $5.000 anuales por compañía (USD $416,67 al mes), con Order Form individual para cada NIT: 50% menos que la propuesta anterior de USD $20.000 combinados.</td>
+<td class="hoy">Vidrio Andino, Vidrio Andino Colombia y Fiberglass se gestionan como razones sociales separadas, cada una facturada de forma independiente.</td>
+<td class="con-jeeves">Plan Platinum por USD $5.000 anuales por compañía (USD $416,67 al mes), con Order Form individual para cada NIT y opción de pago mensual: 50% menos que la propuesta anterior.</td>
 </tr>
 <tr>
 <td class="tema">Trazabilidad y control</td>
@@ -413,7 +426,7 @@ beneficio en especie en lugar de vía nómina, ni la reducción de riesgo operat
 <div class="kicker">Programa</div>
 <h3>Pagos en Especie · Recarga de Tarjetas</h3>
 <ul>
-<li><span class="dot">●</span> Tarjeta física Mastercard + tarjeta virtual para cada uno de los 15 colaboradores (Vidrio Andino y Vidrio Andino Colombia).</li>
+<li><span class="dot">●</span> Tarjeta física Mastercard + tarjeta virtual para los colaboradores de Vidrio Andino, Vidrio Andino Colombia y Fiberglass.</li>
 <li><span class="dot">●</span> Recargas masivas mensuales programadas desde un solo flujo de aprobación.</li>
 <li><span class="dot">●</span> Beneficio entregado sin impacto en nómina ni cargas prestacionales/parafiscales.</li>
 <li><span class="dot">●</span> Trazabilidad completa: quién recibió, cuánto, cuándo y dónde se utilizó.</li>
@@ -438,78 +451,34 @@ GTM Jeeves
 </div>
 
 <script>
-function fmtCOP(n){
-return '$' + Math.round(n).toLocaleString('es-CO') + ' COP';
-}
-function fmtUSD(n){
-return 'USD $' + Math.round(n).toLocaleString('en-US');
-}
-function fmtUSD2(n){
-return 'USD $' + n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
-}
-function fmtPct(n){
-const sign = n >= 0 ? '+' : '';
-return sign + n.toFixed(1) + '%';
-}
-
+function fmtCOP(n){return '$' + Math.round(n).toLocaleString('es-CO') + ' COP';}
+function fmtUSD(n){return 'USD $' + Math.round(n).toLocaleString('es-CO');}
+function fmtUSD2(n){return 'USD $' + n.toLocaleString('es-CO',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtPct(n){return (n>=0?'+':'') + n.toFixed(1) + '%';}
+function v(id){return parseFloat(document.getElementById(id).value) || 0;}
+function set(id,t){document.getElementById(id).textContent=t;}
 function calcular(){
-const valorPlanUSD = parseFloat(document.getElementById('valorPlanUSD').value) || 0;
-const trm = parseFloat(document.getElementById('trm').value) || 0;
-const gastoMensualTarjetas = parseFloat(document.getElementById('gastoMensualTarjetas').value) || 0;
-const salarioMensual = parseFloat(document.getElementById('salarioMensual').value) || 0;
-const recargasMes = parseFloat(document.getElementById('recargasMes').value) || 0;
-const minutosPorRecarga = parseFloat(document.getElementById('minutosPorRecarga').value) || 0;
-const horasTrabajadas = parseFloat(document.getElementById('horasTrabajadas').value) || 1;
-const automatizacionOn = document.getElementById('toggleAutomatizacion').checked;
-
-// Costo de la plataforma: valor del plan (USD) convertido a COP con la TRM del día.
-const numCompanias = 2;
-const valorPlanTotalUSD = valorPlanUSD * numCompanias;
-const costoAnualPlataforma = valorPlanTotalUSD * trm;
+const valorPlanUSD = v('valorPlanUSD'), trm = v('trm');
+const salario = v('salarioMensual'), minutos = v('minutosPorRecarga'), horas = v('horasTrabajadas') || 1;
+const autoOn = document.getElementById('toggleAutomatizacion').checked;
+// Costo de la plataforma por compañía
+const costo = valorPlanUSD * trm;
 const mensualUSD = valorPlanUSD / 12;
-
-// Cashback 1% sobre el gasto en tarjetas, aplicado únicamente los primeros 6 meses.
-const ahorroCashback = gastoMensualTarjetas * 6 * 0.01;
-
-// Automatización de recarga de tarjetas: horas de captura manual evitadas × costo/hora × 12 meses.
-const costoHora = salarioMensual / horasTrabajadas;
-const horasCapturaMes = recargasMes * (minutosPorRecarga / 60);
-const ahorroAutomatizacion = automatizacionOn ? (horasCapturaMes * costoHora * 12) : 0;
-
-const totalAno1 = ahorroCashback + ahorroAutomatizacion;
-const totalAno2 = ahorroAutomatizacion;
-
-const netoAno1 = totalAno1 - costoAnualPlataforma;
-const netoAno2 = totalAno2 - costoAnualPlataforma;
-
-document.getElementById('valorPlanCOP').value = fmtCOP(costoAnualPlataforma);
-document.getElementById('cashbackPreview').value = fmtCOP(ahorroCashback) + ' (año 1)';
-
-document.getElementById('rCashback').textContent = fmtCOP(ahorroCashback);
-document.getElementById('rAutomatizacion').textContent = fmtCOP(ahorroAutomatizacion);
-
-document.getElementById('totalAno1').textContent = fmtCOP(totalAno1);
-document.getElementById('totalAno2').textContent = fmtCOP(totalAno2);
-
-document.getElementById('costoPlataformaLbl1').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanTotalUSD);
-document.getElementById('costoPlataformaLbl2').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanTotalUSD);
-document.getElementById('valorMensual').value = fmtUSD2(mensualUSD) + ' / ' + fmtCOP(mensualUSD * trm) + ' por compañía';
-document.getElementById('valorMensualHint').textContent = 'Ambas compañías: ' + fmtUSD2(mensualUSD * numCompanias) + ' / ' + fmtCOP(mensualUSD * numCompanias * trm) + ' al mes';
-
-document.getElementById('netoAno1').textContent = fmtCOP(netoAno1);
-document.getElementById('netoAno2').textContent = fmtCOP(netoAno2);
-
-document.getElementById('automatizacionBreakdown').textContent =
-automatizacionOn
-? ('= ' + horasCapturaMes.toFixed(1) + ' h/mes de captura manual evitadas × ' + fmtCOP(costoHora) + '/hora × 12 meses')
-: 'Módulo desactivado — no se suma al ahorro total.';
-}
-
-document.querySelectorAll('#calculadora input').forEach(el => {
-el.addEventListener('input', calcular);
-el.addEventListener('change', calcular);
+document.getElementById('valorPlanCOP').value = fmtCOP(costo);
+document.getElementById('valorMensual').value = fmtUSD2(mensualUSD) + ' / ' + fmtCOP(mensualUSD * trm);
+const costoHora = salario / horas;
+['VA','VAC','FG'].forEach(k => {
+  const gasto = v('gasto'+k), recargas = v('recargas'+k);
+  const cashback = gasto * 6 * 0.01;                       // 1% primeros 6 meses
+  const horasMes = recargas * (minutos / 60);
+  const auto = autoOn ? horasMes * costoHora * 12 : 0;      // automatización recargas
+  const t1 = cashback + auto;
+  set('rCashback'+k, fmtCOP(cashback)); set('rAuto'+k, fmtCOP(auto));
+  set('total1'+k, fmtCOP(t1));
+  set('breakdown'+k, autoOn ? ('Automatización: ' + horasMes.toFixed(1) + ' h/mes evitadas × ' + fmtCOP(costoHora) + '/hora × 12 meses') : 'Módulo de automatización desactivado.');
 });
-
+}
+document.querySelectorAll('#calculadora input').forEach(el => {el.addEventListener('input', calcular); el.addEventListener('change', calcular);});
 calcular();
 </script>
 </body>
