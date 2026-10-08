@@ -122,6 +122,8 @@ border:1px solid #3a2f16;border-radius:16px;padding:24px;text-align:center;
 }
 .roe-card .tag{font-size:12px;color:var(--gold);letter-spacing:0.06em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
 .roe-card .num{font-size:36px;font-weight:800;color:var(--gold);}
+.promo{display:inline-flex;align-items:center;gap:10px;background:#0f2a1f;border:1px solid #145c40;color:var(--green);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:600;margin-bottom:22px;}
+.promo s{color:var(--muted);font-weight:500;}
 
 .assumptions{margin-top:20px;font-size:11.5px;color:#6d6d78;line-height:1.6;border-top:1px solid var(--border);padding-top:16px;}
 
@@ -216,6 +218,7 @@ body.locked > :not(#accessGate){display:none !important;}
 
 <div class="addressed">Preparado para <b>Nelson Garaviz</b> · Vidrio Andino y Vidrio Andino Colombia (Saint-Gobain)</div>
 
+<div class="promo">⭐ Condición especial · 50% de descuento: <s>USD $20.000</s> → USD $10.000/año (USD $5.000 por compañía)</div>
 <h1 class="hero-title">Compensación estratégica <em>en especie</em>, entregada en segundos por tarjeta</h1>
 <p class="hero-lead">
 Jeeves convierte bonificaciones, incentivos y beneficios en especie para los colaboradores de Vidrio Andino
@@ -255,9 +258,18 @@ para un programa combinado de 15 usuarios (12 de Vidrio Andino y 3 de Vidrio And
 <div class="fixed">Platinum</div>
 </div>
 <div class="field">
-<label>Valor Anual del Plan (USD)</label>
-<input type="number" id="valorPlanUSD" value="20000" step="100">
-<span class="hint">Plan combinado: Vidrio Andino + Vidrio Andino Colombia en una sola razón facturable, en lugar de USD $15.000 por cada compañía por separado.</span>
+<label>Valor Anual del Plan (USD) · por compañía</label>
+<input type="number" id="valorPlanUSD" value="5000" step="100">
+<span class="hint">Condición especial: USD $5.000 por compañía al año (Vidrio Andino S.A.S. y Vidrio Andino Colombia S.A.S., con Order Form individual por NIT) — 50% menos que la propuesta anterior de USD $20.000 combinados.</span>
+</div>
+<div class="field">
+<label>Número de compañías</label>
+<div class="fixed">2</div>
+</div>
+<div class="field">
+<label>Valor Mensual del Plan (USD / COP)</label>
+<input type="text" id="valorMensual" disabled value="—">
+<span class="hint" id="valorMensualHint">—</span>
 </div>
 <div class="field">
 <label>TRM del día (COP/USD)</label>
@@ -267,7 +279,7 @@ para un programa combinado de 15 usuarios (12 de Vidrio Andino y 3 de Vidrio And
 <div class="field">
 <label>Costo Anual de la Plataforma (COP)</label>
 <input type="text" id="valorPlanCOP" disabled value="—">
-<span class="hint">Valor Anual del Plan × TRM del día</span>
+<span class="hint">Valor Anual del Plan × 2 compañías × TRM del día</span>
 </div>
 <div class="field">
 <label>Gasto mensual en tarjetas (COP)</label>
@@ -367,7 +379,7 @@ beneficio en especie en lugar de vía nómina, ni la reducción de riesgo operat
 <tr>
 <td class="tema">Facturación por razón social</td>
 <td class="hoy">Vidrio Andino y Vidrio Andino Colombia se gestionan como dos razones sociales separadas, cada una facturada de forma independiente por el proveedor actual.</td>
-<td class="con-jeeves">Un solo plan Platinum combinado por USD $20.000 anuales para ambas razones sociales, en lugar de USD $15.000 por cada una por separado.</td>
+<td class="con-jeeves">Plan Platinum por USD $5.000 anuales por compañía (USD $416,67 al mes), con Order Form individual para cada NIT: 50% menos que la propuesta anterior de USD $20.000 combinados.</td>
 </tr>
 <tr>
 <td class="tema">Trazabilidad y control</td>
@@ -432,6 +444,9 @@ return '$' + Math.round(n).toLocaleString('es-CO') + ' COP';
 function fmtUSD(n){
 return 'USD $' + Math.round(n).toLocaleString('en-US');
 }
+function fmtUSD2(n){
+return 'USD $' + n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
 function fmtPct(n){
 const sign = n >= 0 ? '+' : '';
 return sign + n.toFixed(1) + '%';
@@ -448,7 +463,10 @@ const horasTrabajadas = parseFloat(document.getElementById('horasTrabajadas').va
 const automatizacionOn = document.getElementById('toggleAutomatizacion').checked;
 
 // Costo de la plataforma: valor del plan (USD) convertido a COP con la TRM del día.
-const costoAnualPlataforma = valorPlanUSD * trm;
+const numCompanias = 2;
+const valorPlanTotalUSD = valorPlanUSD * numCompanias;
+const costoAnualPlataforma = valorPlanTotalUSD * trm;
+const mensualUSD = valorPlanUSD / 12;
 
 // Cashback 1% sobre el gasto en tarjetas, aplicado únicamente los primeros 6 meses.
 const ahorroCashback = gastoMensualTarjetas * 6 * 0.01;
@@ -473,8 +491,10 @@ document.getElementById('rAutomatizacion').textContent = fmtCOP(ahorroAutomatiza
 document.getElementById('totalAno1').textContent = fmtCOP(totalAno1);
 document.getElementById('totalAno2').textContent = fmtCOP(totalAno2);
 
-document.getElementById('costoPlataformaLbl1').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanUSD);
-document.getElementById('costoPlataformaLbl2').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanUSD);
+document.getElementById('costoPlataformaLbl1').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanTotalUSD);
+document.getElementById('costoPlataformaLbl2').textContent = fmtCOP(costoAnualPlataforma) + ' / ' + fmtUSD(valorPlanTotalUSD);
+document.getElementById('valorMensual').value = fmtUSD2(mensualUSD) + ' / ' + fmtCOP(mensualUSD * trm) + ' por compañía';
+document.getElementById('valorMensualHint').textContent = 'Ambas compañías: ' + fmtUSD2(mensualUSD * numCompanias) + ' / ' + fmtCOP(mensualUSD * numCompanias * trm) + ' al mes';
 
 document.getElementById('netoAno1').textContent = fmtCOP(netoAno1);
 document.getElementById('netoAno2').textContent = fmtCOP(netoAno2);
